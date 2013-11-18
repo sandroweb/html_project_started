@@ -21,6 +21,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			compress: {
+			//build: {
 				files: {
 					'js/main.min.js': ['sources/js/**/*.js', 'sources/js/*.js']
 				},
@@ -32,7 +33,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			scripts: {
-				files: ['sources/js/**/*.js', 'sources/js/*.js'],
+				files: ['sources/js/*.js', 'sources/js/**/*.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false
